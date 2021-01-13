@@ -2,19 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="de842418-73d5-4b41-9c93-bd8eddea30a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1011.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10250.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/10757.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1193.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1193_answer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2292.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2775.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2869.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Chap26 BFSDFS/1260.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../this_is_coding_test/Part5/BFS_repeat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../this_is_coding_test/Part5/BFS_repeat2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../this_is_coding_test/Part5/BFS_repeat3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../this_is_coding_test/Part5/BFS예제_5-9.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../this_is_coding_test/Part5/DFS_REPEAT2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../this_is_coding_test/Part5/DFS_repeat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../this_is_coding_test/Part5/DFS예제_5-8.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../this_is_coding_test/Part5/Quiz3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +45,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Chap8" />
   </component>
   <component name="RunManager" selected="Python.2775">
     <configuration name="1011" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
