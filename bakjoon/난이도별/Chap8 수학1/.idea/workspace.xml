@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="de842418-73d5-4b41-9c93-bd8eddea30a9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Chap26 BFSDFS/1260.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../this_is_coding_test/Part5/BFS_repeat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../this_is_coding_test/Part5/BFS_repeat2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../this_is_coding_test/Part5/BFS_repeat3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../this_is_coding_test/Part5/BFS예제_5-9.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../this_is_coding_test/Part5/DFS_REPEAT2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../this_is_coding_test/Part5/DFS_repeat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../this_is_coding_test/Part5/DFS예제_5-8.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../this_is_coding_test/Part5/Quiz3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="de842418-73d5-4b41-9c93-bd8eddea30a9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
