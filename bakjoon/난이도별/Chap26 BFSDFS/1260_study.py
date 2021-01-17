@@ -1,38 +1,30 @@
 from collections import deque
 
-def dfs(v):
-    print(v, end = ' ')
-    visited[v] = True
-    for e in arr[v]:
-        if visited[e] == False:
-            dfs(e)
 
-def bfs(v):
+def bfs1(v):
     q = deque()
-    print(q)
     q.append(v)
-    print(q)
     visited[v] = True
-    print(v, end = ' ')
+
     while q:
         v = q.popleft()
+        print(v, end=' ')
         for e in arr[v]:
-            if visited[e] == False:
+            if not visited[e]:
                 q.append(e)
                 visited[e] = True
-                print(e, end = ' ')
-#
-# def bfs(graph,start,visited2):
-#     queue=deque([start])
-#     visited2[start]=True
-#
-#     while queue:
-#         v = queue.popleft()
-#         print(v,end=" ")
-#         for i in graph[v]:
-#             if not visited2[i]:
-#                 queue.append(i)
-#                 visited2[i]=True
+               
+def bfs2(arr,start,visited2):
+    queue=deque([start])
+    visited2[start]=True
+
+    while queue:
+        v = queue.popleft()
+        print(v,end=" ")
+        for i in arr[v]:
+            if not visited2[i]:
+                queue.append(i)
+                visited2[i]=True
 
 
 n, m, v = map(int, input().split(' '))
@@ -46,8 +38,9 @@ for _ in range(m):
 for i in arr:
     i.sort()
 
+
 visited = [False] * (n+1)
-dfs(v)
+bfs1(v)
 print()
-visited = [False] * (n+1)
-bfs(v)
+visited2 = [False] * (n+1)
+bfs2(arr,v,visited2)
