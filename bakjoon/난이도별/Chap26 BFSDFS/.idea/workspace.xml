@@ -2,11 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e6ebab3-ac43-4e2c-ab41-da5fd4a24564" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/2606.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../this_is_coding_test/Part5/5-10.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../this_is_coding_test/Part5/nnn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1260.py" beforeDir="false" afterPath="$PROJECT_DIR$/1260.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Chap8 수학1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Chap8 수학1/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2606/2606_bfs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2606/2606_dfs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2667/2667_bfs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2667/2667_dfs.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/global/33Closer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../this_is_coding_test/Part5/210117/5-11_2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../this_is_coding_test/Part5/210117/5-11_3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1260.py" beforeDir="false" afterPath="$PROJECT_DIR$/1260/1260.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1260_anotherperson.py" beforeDir="false" afterPath="$PROJECT_DIR$/1260/1260_anotherperson.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1260_re.py" beforeDir="false" afterPath="$PROJECT_DIR$/1260/1260_re.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1260_re2.py" beforeDir="false" afterPath="$PROJECT_DIR$/1260/1260_re2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1260_re3.py" beforeDir="false" afterPath="$PROJECT_DIR$/1260/1260_re3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1260_study.py" beforeDir="false" afterPath="$PROJECT_DIR$/1260/1260_study.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2606.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,10 +42,18 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Python.1260">
-    <configuration name="1260" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kyungdong\Documents\python_algorithm\bakjoon\난이도별\Chap26 BFSDFS\2667" />
+      <recent name="C:\Users\Kyungdong\Documents\python_algorithm\bakjoon\난이도별\Chap26 BFSDFS\2606" />
+      <recent name="C:\Users\Kyungdong\Documents\python_algorithm\bakjoon\난이도별\Chap26 BFSDFS" />
+      <recent name="C:\Users\Kyungdong\Documents\python_algorithm\bakjoon\난이도별\Chap26 BFSDFS\1260" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.2667_bfs">
+    <configuration name="2606_bfs" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Chap26 BFSDFS" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -47,7 +65,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1260.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Kyungdong\Documents\python_algorithm\bakjoon\난이도별\Chap26 BFSDFS\2606\2606_bfs.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -56,7 +74,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="2606" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="2606_dfs" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Chap26 BFSDFS" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -68,7 +86,70 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2606.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\Kyungdong\Documents\python_algorithm\bakjoon\난이도별\Chap26 BFSDFS\2606\2606_dfs.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="2667_bfs" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Chap26 BFSDFS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Kyungdong\Documents\python_algorithm\bakjoon\난이도별\Chap26 BFSDFS\2667\2667_bfs.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="2667_dfs" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Chap26 BFSDFS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\Kyungdong\Documents\python_algorithm\bakjoon\난이도별\Chap26 BFSDFS\2667\2667_dfs.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="33Closer" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Chap26 BFSDFS" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/global" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/global/33Closer.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -79,8 +160,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.1260" />
-        <item itemvalue="Python.2606" />
+        <item itemvalue="Python.2667_bfs" />
+        <item itemvalue="Python.33Closer" />
+        <item itemvalue="Python.2667_dfs" />
+        <item itemvalue="Python.2606_bfs" />
+        <item itemvalue="Python.2606_dfs" />
       </list>
     </recent_temporary>
   </component>
