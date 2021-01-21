@@ -26,6 +26,8 @@ for i in range(t):
     for y in range(n):
         for x in range(m):
             if graph[y][x] == 1:
+                print("cnt=",cnt)
+                print("bfs값=",bfs(y,x))
                 cnt += bfs(y,x)
     ans.append(cnt)
 for j in ans:
