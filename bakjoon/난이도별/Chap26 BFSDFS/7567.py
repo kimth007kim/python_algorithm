@@ -5,22 +5,29 @@ def bfs():
     day = -1
     for j in tomato:
         q.append(j)
-    print(q)
     while q:
+        print(q)
         day+=1
         for _ in range(len(q)):
             x, y = q.popleft()
+            print("자른 x,y",x,y)
+            for j in graph:
+                print(j)
+            print()
             for i in range(4):
                 nx=x+dx[i]
                 ny=y+dy[i]
-                # print(graph)
-                # print(day)
+                print(nx,ny)
+                print("day",day)
                 if nx<0 or ny<0 or nx>=n or ny>=m:
                     continue
                 if graph[nx][ny]==-1:
                     continue
                 if graph[nx][ny]==0:
                     graph[nx][ny]=1
+                    for j in graph:
+                        print(j)
+                    print()
                     q.append((nx,ny))
     for b in graph:
         if 0 in b:
@@ -38,5 +45,6 @@ for i in range(n):
     for j in range(m):
         if graph[i][j]==1:
             tomato.append((i,j))
+
 
 print(bfs())
