@@ -1,14 +1,14 @@
 from collections import deque
 import sys
 
-def bfs(sx,sy,ex,ey):
+def bfs():
     q=deque()
     q.append((sx,sy))
     cnt=0
     while q:
-        # print(q)
+        print(q)
         cnt+=1
-        # print(cnt)
+        print(cnt)
         for i in range((len(q))):
             x,y=q.popleft()
             for i in range(8):
@@ -33,7 +33,7 @@ for i in range(case):
     if sx == ex and sy== ey:
         ans.append(1)
     else:
-        ans.append(bfs(sx,sy,ex,ey))
+        ans.append(bfs())
 
 
 for j in ans:
