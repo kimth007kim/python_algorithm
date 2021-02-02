@@ -18,6 +18,10 @@ def bfs():
             if nx < 0 or nx >= n or ny < 0 or ny >= n:
                 continue
             if not d[nx][ny]:
+                # print(nx,ny,d[nx][ny])
+                for j in d:
+                    print(j)
+                print()
                 d[nx][ny] = d[x][y] + 1
                 q.append((nx, ny))
 ans=[]
