@@ -17,4 +17,5 @@ while(start<=end):
     else:
         result = mid
         start = mid+1
+    print(result)
 print(result)
