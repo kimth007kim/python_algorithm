@@ -5,6 +5,7 @@ def heapsort(iterable):
     result=[]
     for value in iterable:
         heapq.heappush(h,value)
+        # print(heap)
     for i in range(len(h)):
         result.append(heapq.heappop(h))
     return result
