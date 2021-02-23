@@ -11,7 +11,7 @@ graph=[[]for i in range(n+1)]
 for i in range(m):
     a,b,c=map(int,input().split())
     graph[a].append((b,c))
-
+print(graph)
 def dijkstra(start):
     q=[]
     heapq.heappush(q,(0,start))
@@ -20,7 +20,9 @@ def dijkstra(start):
         dist,now= heapq.heappop(q)
         if distance[now]<dist:
             continue
+        print("now",now)
         for i in graph[now]:
+            print("i[0]",i[0])
             cost=dist+i[1]
             if distance[i[0]]>cost:
                 distance[i[0]]=cost
