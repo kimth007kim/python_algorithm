@@ -17,6 +17,7 @@ n,m = map(int,input().split())
 parent=[0]*(n+1)
 edges=[]
 result=0
+last=0
 
 for i in range(n+1):
     parent[i]=i
@@ -32,5 +33,8 @@ for edge in edges:
     if find_parent(parent,a) != find_parent(parent,b):
         union_parent(parent,a,b)
         result+=c
+        print("result",result)
+        last =c
+        print("last",last)
 
-print(result)
+print(result-last)
