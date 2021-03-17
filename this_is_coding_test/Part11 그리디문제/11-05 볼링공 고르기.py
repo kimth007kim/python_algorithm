@@ -1,6 +1,5 @@
 # n= 볼링공의 갯수
 # m= 공의 최대 무게
-
 n,m=map(int,input().split())
 num=list(map(int,input().split()))
 
