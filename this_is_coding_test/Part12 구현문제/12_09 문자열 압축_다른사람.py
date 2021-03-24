@@ -19,12 +19,11 @@ def solution(s):
     for sl in range(1,len(s)//2+1):
         compressed=""
         prev=s[0:sl]
-        print("prev",prev)
         count=1
 
         for i in range(sl,len(s)+sl,sl):
             print(count, s[i:i+sl])
-            
+
             if prev== s[i:i+sl]:
                 count+=1
                 # print(count)
