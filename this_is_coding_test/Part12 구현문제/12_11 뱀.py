@@ -29,6 +29,7 @@ info=[]
 
 for _ in range(k):
     a,b = map(int,input().split())
+    data[a][b]=1
 
 l= int(input())
 for _ in range(l):
@@ -63,7 +64,7 @@ def simulate():
                 data[px][py]=0
             if data[nx][ny]==1:
                 data[nx][ny]=2
-                q.aapend((nx,ny))
+                q.append((nx,ny))
         else:
             time+=1
             break
