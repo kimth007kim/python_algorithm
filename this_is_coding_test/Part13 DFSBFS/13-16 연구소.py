@@ -6,13 +6,13 @@ dy=[1,-1,0,0]
 n,m= map(int,input().split())
 virus=[]
 graph=[]
+copygraph=[]
 zero=[]
 
 result=0
 for i in range(n):
     graph.append(list(map(int,input().split())))
-
-
+    copygraph.append(list(map(int, input().split())))
 
 for a in range(n):
     for b in range(m):
@@ -21,12 +21,12 @@ for a in range(n):
         if graph[a][b]==0:
             zero.append((a,b))
 
-def bfs(graph):
+def bfs(graph,copygraph):
     q=deque()
     for i in range(len(virus)):
         q.append(virus[i])
     cnt=0
-    _graph=graph
+    # _graph=graph
     count=0
     while q:
         count+=1
@@ -38,11 +38,11 @@ def bfs(graph):
             if nx>=n or ny>=m or nx<0 or ny<0:
                 continue
 
-            if _graph[nx][ny]==1 or _graph[nx][ny] == 2:
+            if graph[nx][ny]==1 or graph[nx][ny] == 2:
                 continue
 
-            if _graph[nx][ny]==0:
-                _graph[nx][ny]=2
+            if graph[nx][ny]==0:
+                graph[nx][ny]=2
                 q.append((nx,ny))
 
             print("count",count)
@@ -50,13 +50,9 @@ def bfs(graph):
                 break
     for i in range(n):
         for j in range(m):
-            if _graph[i][j]==0:
+            if graph[i][j]==0:
                 cnt+=1
 
-
-
-
-    print(_graph)
     print(cnt)
     return cnt
 
@@ -72,6 +68,6 @@ for i in range(len(zero)):
                 kx ,ky = zero[k]
                 graph[ix][iy],graph[jx][jy],graph[kx][ky]=1,1,1
                 result=max(result,bfs(graph))
-                graph[ix][iy],graph[jx][jy],graph[kx][ky]=0,0,0
+                graph=copygraph
 
 print(result)
