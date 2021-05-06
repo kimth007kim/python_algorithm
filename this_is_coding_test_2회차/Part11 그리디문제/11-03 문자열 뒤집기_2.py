@@ -11,7 +11,7 @@ else:
 
 for i in range(len(data)-1):
     if data[i]!=data[i+1]:
-        if data[i]=="1":
+        if data[i+1]=="1":
             cnt0+=1
         else:
             cnt1+=1
