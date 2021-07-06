@@ -1,34 +1,34 @@
 # word="abcdefghkghdefabc"
 word="gkjfldjkekasm"
-tmp=[]
-while len(word)>0:
-    p=len(word)
-    print(p)
-    for i in range(1,p):
-        if i==p-1:
-            tmp.append("aa")
-            break
-        print(i)
-        left= word[:i]
-        right=word[-i:p]
-
-        # print(word[:i])
-        # print(word[-i:p])
-
+Larr=[]
+Rarr=[]
+array=[]
+def checking(word):
+    for i in range(1, len(word)):
+        left = word[:i]
+        right = word[-i:]
+        # print(left, right)
         if left==right:
-            word=word[i:len(word)-i]
-            tmp.append(left)
-            print(tmp)
-            print("---------발견-----------------")
-            print(word)
-    break
-
-    # break
+            Larr.append(left)
+            Rarr.append(right)
+            return i
+    Larr.append(word)
+    return len(word)
+    # print(left, right)
 
 
-    #     print(i,word[i])
-    # print(p)
-    # break
+while len(word)>0:
+    a=checking(word)
+    word=word[a:]
+    word=word[:-a]
+    # print(Rarr)
 
-# print(len(word))
-print(tmp)
+# print(Larr)
+# print(Rarr)
+for j in range(len(Rarr)-1,-1,-1):
+    Larr.append(Rarr[j])
+print(Larr)
+# print(Rarr)
+#     for i in range(1,len(word)):
+
+
