@@ -7,7 +7,7 @@ def digit(n):
         big=9*(i+1)*(10**i)
         # print(differ,"   ",n," ",differ+big)
         if differ<=n<=differ+big:
-            return i,differ,differ+big
+            return i+1,differ,differ+big
         else:
             differ+=big
         # if 9*(10**i)<n<9*(10**(i+1)):
@@ -15,23 +15,23 @@ def digit(n):
 
 n=int(input)
 d,start,end=digit(n)
+# print("&&&&&&&&&&&&&&",n-start-1)
+NEWNUM=start+(n-start+1)//d
+print(NEWNUM)
+word=str(NEWNUM)
+# print("답답답답답답답답답",word[(n-start-1)%d])
+if 1<=n<=9:
+    print(n)
+else:
+    print(word[(n-start-1)%d])
+
 result=n-start
-# print(d,start,end)
+print(d,start,end)
 s=""
-# print("--------",n-start)
+print("--------",n-start)
 while len(s)<result:
     start += 1
     s+=str(start)
-# print(s)
-# print(len(s))
+print(s)
+print(len(s))
 print(s[result-1])
-# a=""
-# cnt=0
-# number=1
-# while cnt<=98:
-#     a+=str(number)
-#     # print(a)
-#     cnt+=1
-#     number+=1
-# print(a)
-# print(len(a))
