@@ -14,14 +14,14 @@ def solution(play_time, adv_time, logs):
         end = str_to_int(end)
         all_time[start] += 1
         all_time[end] -= 1
-    # print(all_time)
+    print(all_time)
 
     for i in range(1, len(all_time)):
         all_time[i] = all_time[i] + all_time[i - 1]
-    # print(all_time)
+    print(all_time)
     for i in range(1, len(all_time)):
         all_time[i] = all_time[i] + all_time[i - 1]
-    # print(all_time)
+    print(all_time)
 
     most_view=0
     max_time=0

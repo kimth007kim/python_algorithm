@@ -16,6 +16,7 @@ d,start,end=digit(n)
 
 # print("&&&&&&&&&&&&&&",n-start-1)
 NEWNUM= (10**d)+(n-start-1)//(d+1)
+print(start)
 # start+=1
 # NEWNUM=start+(n-start+1)//d
 # print(NEWNUM)

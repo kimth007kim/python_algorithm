@@ -1,12 +1,12 @@
 import sys
 input=sys.stdin.readline
 
-n= int(input())
-data=[]
-for i in range(n):
-    data.append(input())
-# n=3
-# data=["config.sys","config.inf","configures"]
+# n= int(input())
+# data=[]
+# for i in range(n):
+#     data.append(input())
+n=3
+data=["config.sys","config.inf","configures"]
 
 result=""
 for j in range(len(data[0])):
