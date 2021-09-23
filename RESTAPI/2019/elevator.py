@@ -95,6 +95,7 @@ def p0_simulator():
                     if len(passengers)==8:
                         break
                     if not call["id"] in will_exit_by_pasengers and call["start"]==floor:
+                        print(call["id"])
                         call_ids.append(call["id"])
                         will_enter_by_calls.add(call["id"])
                     if len(call_ids)+len(passengers) >=8:
