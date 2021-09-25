@@ -9,6 +9,8 @@ x_auth_token= "0244dcfcd811ba7dabf4b73bb9614074"
 contentType= 'application/json'
 url ="https://kox947ka1a.execute-api.ap-northeast-2.amazonaws.com/prod/users"
 MAX=5
+AVG=3
+
 dx= [0,1,0,-1]
 dy= [1,0,-1,0]
 mp= [[0 for i in range(MAX)] for j in range(MAX)]
@@ -50,31 +52,30 @@ def start_API():
 
     # return result["auth_key"],result["problem"],result["time"]
 
-def locations_API(url,auth_key):
+def locations_API(auth_key):
     target = url+"/locations"
     locations_API = requests.get(target, headers={'Content-Type': contentType, 'Authorization': auth_key})
-    print(locations_API.text)
+    loc_data = locations_API.json()
+    location= loc_data.get("locations")
+    return location
 
-
-def truck_API(url,auth_key):
+def truck_API(auth_key):
     # get방식
     target= url+"/trucks"
     api = requests.get(target,headers={'Content-Type': contentType,'Authorization': auth_key})
     # print(api["trucks"])
-    tmp = LOADS(api.text)
-    arr= tmp["trucks"]
-    for i in arr:
-        print(i)
-    # print(arr)
-    # print(api.text["trucks"])
+    tmp = api.json()
+    truck= tmp.get("trucks")
+    print(truck)
 
-def simulate_API(url,auth_key):
+def simulate_API(url,auth_key,command):
     # put 방식
-    data={ "truck_id": 0, "command": [2, 5, 4, 1, 6] }
-    datas=DUMPS(data)
+    data=json.dumps(command)
     target = url+"/simulate"
-    simulate = requests.put(target, headers={'Content-Type': contentType, 'Authorization': auth_key}, data=datas)
-    print(simulate)
+    response = requests.put(target, headers={'Content-Type': contentType, 'Authorization': auth_key}, data=datas)
+    sim_data =  response.json()
+
+
 def score_API(url,auth_key):
     # get방식
     target=  url+"/score"
@@ -89,12 +90,21 @@ for i in idxM:
     print(i.x ,i.y)
 data = {'commands:{}'}
 a_list=[]
-
-
 # 여기서 부터
-location=1
+location=locations_API(Auth_key)
+trucks = truck_API(Auth_key)
+vstT = [ 0 for i in range(MAX * MAX)]
+vst = [ 0 for i in range(MAX * MAX)]
 
-
+for i in range(MAX *MAX):
+    id = i
+    count = location[i].get('located_bikes_count')
+    command = dict()
+    truckId= 0
+    diff = 0
+    if count > AVG:
+        trucks = truck_API(Auth_key)
+    print(count)
 
 problem_url="https://grepp-cloudfront.s3.ap-northeast-2.amazonaws.com/programmers_imgs/competition-imgs/2021kakao/problem%d_day-%d.json"
 

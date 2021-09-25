@@ -3,7 +3,7 @@ from collections import deque
 
 x_auth_token= "0436cc2bedca3ecb3a39dc731490d671"
 url= "https://kox947ka1a.execute-api.ap-northeast-2.amazonaws.com/prod/users"
-
+AVG= 3
 
 class Rent:
     def __init__(self,id,x,y,remain_bike):
@@ -85,18 +85,62 @@ for i in trucks:
 
 
 status=simulate(auth_key,initial_command)
-# while status != "finished":
-for k in range(4):
+while status != "finished":
+# for k in range(15):
     print()
     print("------------------시작--------------------")
 
-    for i in trucks:
-        print(i)
+    location = locations(auth_key)
+    vstT = [0 for i in range(5 * 5)]
+    for i in location:
+        id = i["id"]
+        count =i["located_bikes_count"]
+        print(id,count)
+        command=dict()
+        diff=0
+        truckId=0
+        trucks = truck(auth_key)
+        if count>AVG:
+            mn=int(1e9)
+            for tr in trucks:
+                if vstT[tr['id']]==True:
+                    continue
+                truckCount = tr['loaded_bikes_count']
+                if mn > truckCount:
+                    truckId=tr['id']
+                    mn = truckCount
+                    diff = count -AVG
+            vstT[truckId]=True
+        elif count < AVG:
+            mx=-1
+            for tr in trucks:
+                if vstT[tr['id']]==True:
+                    continue
+                truckCount = tr['loaded_bikes_count']
+                if mx < truckCount:
+                    truckId = tr['id']
+                    mx = truckCount
+                    diff =count -AVG
+            vstT[truckId] =True
+
+            fr_x,fr_y= id_finder[truckId]
+            to_x,to_y= id_finder[id]
+            if diff==0:
+                print('차이없음')
+                continue
+            print("발견!!!!",fr_x,fr_y,to_x,to_y , "차이 ",diff)
+
+    cars = truck(auth_key)
+    trucks = []
+    # for i in cars:
+    #     print(i)
+        # x, y = id_finder[i['location_id']]
+        # trucks.append(Truck(i['id'], x, y, i['loaded_bikes_count']))
     commands=[]
     for i in range(5):
         commands.append({"truck_id": i, "command":[]})
     status =simulate(auth_key,commands)
-    print(locations(auth_key))
+    # print(locations(auth_key))
 
 
     print("------------------끝--------------------")
