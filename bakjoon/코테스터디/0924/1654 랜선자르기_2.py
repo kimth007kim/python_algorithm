@@ -1,30 +1,33 @@
-import sys
+def binary_search(start, end ,arr):
+    target= 0
+    while start<=end:
+    # for _ in range(3):
+        total=0
+        mid = (start+end)//2
+        for i in arr:
+            total+= i//mid
+        if total<= n:
+            end= mid-1
+        else:
+            start=mid+1
 
-input = sys.stdin.readline
+        if n== total:
+            target = max(target,mid)
+        # print(start,mid,end, total)
+    return target
 
-
-def binary_search(data,start,end):
-    mid = (start+ end)//2
-    total=0
-    while total!=n:
-        total = 0
-        for i in data:
-            total += i // mid
-        if total == n:
-            return mid
-        elif total<n:
-            mid-=1
-        elif total>n:
-            mid+=1
-
-k,n= map(int,input().split())
-data = []
-cnt=0
-
+# k,n=4,11
+# arr=[802, 743, 457, 539]
+# MAX_NUM= 802
+k, n = map(int,input().split())
+arr= []
+MAX_NUM= -1
 for i in range(k):
-    tmp = int(input())
-    data.append(tmp)
-    cnt+=tmp
-start ,end= 1, max(data)
-print(binary_search(data,cnt//n,data[-1]))
+    tmp=int(input())
+    arr.append(tmp)
+    if MAX_NUM< tmp:
+        MAX_NUM=tmp
+
+answer= binary_search(1, MAX_NUM ,arr)
+print(answer)
 
