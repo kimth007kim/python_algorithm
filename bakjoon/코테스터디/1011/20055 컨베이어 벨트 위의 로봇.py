@@ -30,12 +30,13 @@ class slot:
 belt={}
 for i in range(1,n*2+1):
     belt[i]=slot(i,data[i-1])
-# for i in belt:
-#     print(belt[i])
+for i in belt:
+    print(belt[i])
 
 time = 1
 product=1
 now = [i for i in range(1,n+1)]
+print(now)
 # for i in belt:
 #     print(i,belt[i])
 
@@ -50,7 +51,7 @@ while True:
             now[i]=n*2
     # print("1번 후의 now", now)
 
-    # print("1단계",now)
+    print("1단계",now)
     # print("1단계", n-1,belt[now[n-1]])
 
     # 맨마지막 벨트면 제외시키기
