@@ -25,10 +25,12 @@ while i<n:
     SHOW(dp)
     print()
     i+=1
-
+print("---------------")
 SHOW(dp)
+print("---------------")
 for i in range(1,n):
     for j in range(2,n):
+        print(i,j)
         if arr[i][j]==0 and arr[i][j-1]==0 and arr[i-1][j]==0:
             dp[2][i][j]= sum(dp[k][i-1][j-1] for k in range(3))
             print("1번케이스")
@@ -39,4 +41,5 @@ for i in range(1,n):
             print("2번케이스")
             SHOW(dp)
 
+SHOW(dp)
 print(sum(dp[i][-1][-1] for i in range(3)))
