@@ -1,0 +1,11 @@
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        profit = 0
+        min_price = sys.maxsize
+
+        for price in prices:
+            print(price)
+            min_price = min(min_price, price)
+            profit = max(profit, price - min_price)
+            print(min_price, profit)
+        return profit
