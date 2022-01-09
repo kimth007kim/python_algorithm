@@ -33,5 +33,6 @@ for i in range(h):
         MIN=tmp
     elif MIN==tmp:
         cnt+=1
+show(graph)
 
 print(MIN,cnt)
