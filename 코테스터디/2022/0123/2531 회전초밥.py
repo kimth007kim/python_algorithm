@@ -14,12 +14,14 @@ class Number:
         self.prev=deque()
         self.MAX=0
         self.target= target
+
     def delete(self):
         now = self.prev.popleft()
         if self.dic[now]==1:
             del self.dic[now]
         else:
             self.dic[now]-=1
+
     def count(self):
         self.LEN= len(self.dic)
         self.in_value()
@@ -53,6 +55,7 @@ store += store[:k]
 for i in range(k):
     diction.append(store[i])
 diction.count()
+
 for i in range(k,n):
     diction.delete()
     diction.append(store[i])
