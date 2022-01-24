@@ -49,7 +49,7 @@ for i in range(n):
     store.append(int(input()))
 
 
-store += store[:k]
+store += store[:k-1]
 
 
 for i in range(k):
@@ -60,5 +60,5 @@ for i in range(k,n):
     diction.delete()
     diction.append(store[i])
     diction.count()
-    print(diction)
+    # print(diction)
 print(diction.MAX)
