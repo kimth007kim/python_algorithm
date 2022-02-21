@@ -1,6 +1,14 @@
+import sys
+
+input= sys.stdin.readline
+
 cand=[]
-priority={}
 arr=[]
+priority={}
+dic={}
+word = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+for i in range(len(word)):
+    dic[word[i]]=i
 
 def convert_to_10(n):
     result = 0
@@ -14,51 +22,24 @@ def convert_to_36(n):
     if q==0:
         return word[r]
     return convert_to_36(q)+ word[r]
-
-
+result=0
 for _ in range(int(input())):
-    tmp = input()
-    arr.append(tmp)
+    tmp = input().rstrip()
     l = len(tmp)
     for j in range(len(tmp)):
         if tmp[j] not in priority:
-            priority[tmp[j]]=36**(l-j)
+            priority[tmp[j]]=(35-dic[tmp[j]])*36**(l-j-1)
         else:
-            priority[tmp[j]]+=36**(l-j)
-dic={}
-word = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-for i in range(len(word)):
-    dic[word[i]]=i
-
-
-cand =[]
+            priority[tmp[j]]+=(35-dic[tmp[j]])*36**(l-j-1)
+    result+=convert_to_10(tmp)
+n= int(input())
+if len(priority)<n:
+    n=len(priority)
+arr=[]
 for i in priority:
-    cand.append([priority[i],dic[i],i])
+    arr.append(priority[i])
 
-cand.sort(key= lambda x:(-x[0],x[1]))
-print(cand)
-num=int(input())
-if len(cand)<num:
-    num= len(cand)
-total = []
-for i in range(num):
-    total.append(cand[i][2])
-print(total)
-
-array=[]
-for i in range(len(arr)):
-    temp=""
-    for j in range(len(arr[i])):
-        if arr[i][j] in total:
-            temp+="Z"
-        else:
-            temp+=arr[i][j]
-    array.append(temp)
-
-answer=0
-
-for i in array:
-    tmp=convert_to_10(i)
-    answer+=tmp
-
-print(convert_to_36(answer))
+arr.sort(reverse=True)
+arr= arr[:n]
+result+=sum(arr)
+print(convert_to_36(result))
