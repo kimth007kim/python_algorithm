@@ -13,9 +13,9 @@ def bfs():
     visited=[[INF]*w for _ in range(h)]
     visited[0][0]=0
     q=deque()
-    q.append([0,0,k])
+    q.append([0,0,0,k])
     while q:
-        x,y,cnt= q.popleft()
+        x,y, move,cnt= q.popleft()
         for i in range(4):
             n_x = d_x[i]+x
             n_y = d_y[i]+y
