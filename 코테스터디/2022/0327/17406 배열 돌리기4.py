@@ -49,8 +49,10 @@ def turn(graph,point):
 
 def dfs(now,arr,graph):
     global answer
-    # print(now,arr,graph)
+    print(now,arr)
     next=turn(graph,now)
+    for p in graph:
+        print(p)
     if len(arr)==k:
 
         answer.append(calc(next))
