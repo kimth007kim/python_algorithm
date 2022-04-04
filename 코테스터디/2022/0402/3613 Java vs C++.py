@@ -4,11 +4,24 @@ import sys
 input = sys.stdin.readline
 word= input().rstrip()
 def solution(word):
+    if word[0].isupper() or word[0]=="_":
+        return "Error!"
+    if word[len(word)-1]=="_":
+        return "Error!"
+    prev=""
+    for i in range(len(word)):
+        now = word[i]
+        if prev=="_" and prev==now:
+            return "Error!"
+        if prev=="_" and now.isupper():
+            return "Error!"
+
+        prev =now
 
     if re.search("_",word):
-        print("1단계")
         if re.search("[A-Z]",word):
             return "Error!"
+
         result=re.findall(r'_[a-z]',word)
         arr=[]
         for i in result:
@@ -18,8 +31,6 @@ def solution(word):
         return word
 
     elif re.search("[A-Z]",word):
-        if word[0].isupper():
-            return "Error!"
         result=re.findall(r'[A-Z]',word)
         arr=[]
         for i in result:
