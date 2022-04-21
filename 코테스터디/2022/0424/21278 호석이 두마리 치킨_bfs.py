@@ -1,14 +1,8 @@
 from itertools import combinations
 import sys
-
+from collections import deque
 input =sys.stdin.readline
 
-def dfs(now,next,cnt):
-    if visited[now][next]<cnt:
-        return
-    visited[now][next]=cnt
-    for i in graph[next]:
-        dfs(now,i,cnt+1)
 
 def score(a,b,MIN):
     total=0
@@ -28,13 +22,22 @@ for i in range(m):
     a,b= map(int,input().split())
     graph[a].append(b)
     graph[b].append(a)
+    visited[a][b]=1
+    visited[b][a]=1
 
 for i in range(n+1):
     visited[i][i]=0
 
-for i in range(1,n+1):
-    for j in graph[i]:
-        dfs(i,j,1)
+for k in range(1,n+1):
+    for a in range(1,n+1):
+        for b in range(1,n+1):
+            visited[a][b]= min(visited[a][b],visited[a][k]+visited[k][b])
+
+# for i in visited:
+#     print(i)
+# for i in range(1,n+1):
+#     for j in graph[i]:
+#         dfs(i,j,1)
 
 comb = combinations(range(1,n+1),2)
 MIN=int(1e9)
