@@ -51,6 +51,8 @@ for i in range(n+m):
 for _ in range(int(input())):
     start,end = map(str,input().split())
     move_parent(start,end,folders,parents)
+    print(parents)
+    print(folders)
 
 for now in parents:
     for i in folders[now]:
