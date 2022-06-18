@@ -17,4 +17,7 @@ for i in range(1,n+1):
         else:
             dp[i][j]=dp[i-1][j]
 
+        for k in dp:
+            print(k)
+
 print(dp[n][t])
