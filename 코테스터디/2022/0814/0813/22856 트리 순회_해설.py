@@ -1,6 +1,3 @@
-from collections import defaultdict
-from collections import deque
-import sys
 
 left = dict()
 right = dict()
@@ -38,8 +35,10 @@ edge_count = node_count * 2
 movement = 0
 
 while last_node != 1:
+    print(last_node)
     movement += 1
     last_node = parent[last_node]
+
 
 print(edge_count -movement)
 
