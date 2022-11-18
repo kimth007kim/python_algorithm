@@ -20,4 +20,5 @@ for i in range(2, n + 1):
         box_cost = k + siz * (max_v + min_v)
         dp[i] = min(dp[i], dp[j - 1] + box_cost)
         print(min_v, max_v)
+        print(dp)
 print(dp[n])
